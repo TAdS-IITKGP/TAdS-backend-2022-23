@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 app.use(cors(corsOptions));
 app.options("*", cors());
 
-const port = 5000;
+const port = process.env.port || 5000;
 
 app.use("/api", require("./route"));
 
