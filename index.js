@@ -27,6 +27,10 @@ app.use((req, res, next) => {
 app.use(cors(corsOptions));
 app.options("*", cors());
 
+app.get('/',(req,res) => {
+  res.send("ho gya bhai");
+});
+
 const port = process.env.port || 5000;
 
 app.use("/api", require("./route"));
