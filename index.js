@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-
+/*
 app.use(express.json());
 const corsOptions = {
   origin: "http://localhost:3000",
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-
+*/
 app.use(cors(corsOptions));
 app.options("*", cors());
 
@@ -33,7 +33,7 @@ app.get('/',(req,res) => {
 
 const port = process.env.port || 5000;
 
-app.use("/api", require("./route"));
+// app.use("/api", require("./route"));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
